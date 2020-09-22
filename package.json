@@ -1,0 +1,23 @@
+{
+  "name": "templates",
+  "version": "0.0.0",
+  "description": "templates: lib/libs/app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2snail/templates.git"
+  },
+  "keywords": [
+    "2snail",
+    "template"
+  ],
+  "author": "zhangaz1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2snail/templates/issues"
+  },
+  "homepage": "https://github.com/2snail/templates#readme"
+}
