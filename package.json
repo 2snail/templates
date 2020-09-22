@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/2snail/templates/issues"
   },
-  "homepage": "https://github.com/2snail/templates#readme"
+  "homepage": "https://github.com/2snail/templates#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }
