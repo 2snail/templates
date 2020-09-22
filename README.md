@@ -28,4 +28,4 @@ $ npm run build
 
 ## docs
 
-[https://2snail.github.io/templates](https/2snail.github.io/templates)
+[https://2snail.github.io/templates](https://2snail.github.io/templates)
