@@ -31,14 +31,13 @@
     "type": "git",
     "url": "git+https://github.com/2snail/templates.git"
   },
-  "scripts": {
-    "test": "jest"
-  },
   "bugs": {
     "url": "https://github.com/2snail/templates/issues"
   },
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@umijs/utils": "^3.2.22"
+  }
 }
