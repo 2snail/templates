@@ -22,7 +22,7 @@
   "files": [
     "lib",
     "bin",
-    "templates",
+    "tpls",
     "README.md",
     "LICENSE",
     "package.json"
