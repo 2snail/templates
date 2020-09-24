@@ -1,7 +1,8 @@
 {
+  "version": "0.0.0",
   "private": true,
   "name": "templates",
-  "version": "1.0.0",
+  "description": "templates: lib/libs/app",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -11,11 +12,26 @@
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:watch": "umi-test -w",
+    "test:coverage": "umi-test --coverage",
+    "clean": "lerna clean",
+    "changelog": "lerna-changelog",
+    "publish": "npm test && npm run changelog && npm run build && lerna publish -m \"chore: publish\""
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2snail/templates.git"
+  },
+  "keywords": [
+    "2snail",
+    "template"
+  ],
+  "author": "zhangaz1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2snail/templates/issues"
+  },
+  "homepage": "https://github.com/2snail/templates#readme",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -31,11 +47,14 @@
     "react": "^16.12.0"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.14",
     "@umijs/test": "^3.0.5",
     "dumi": "^1.0.10",
+    "execa": "^4.0.3",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
     "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"
