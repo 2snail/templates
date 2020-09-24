@@ -12,5 +12,5 @@
   },
   "packages": ["packages/*"],
   "version": "independent",
-  "npm": "yarn"
+  "npm": "npm"
 }
