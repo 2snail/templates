@@ -7,17 +7,22 @@ const fixtures = join(__dirname, 'fixtures');
 const generate = 'generate';
 
 describe('create-lib:index', () => {
-  test('runGenerator', async cb => {
+  test('node cli.js', async cb => {
     await execa('mkdir', [generate], {
       cwd: fixtures,
       execPath: fixtures,
     }).catch(err => console.error(err.message));
 
     const cwd = join(fixtures, generate);
-    await execa('node', ['../../../bin/create-lib.js'], { cwd, execPath: cwd });
+    const result = await execa('node', ['../../../bin/create-lib.js'], {
+      cwd,
+      execPath: cwd,
+    });
+    console.log('result:', result);
 
-    const target = join(cwd, 'src', 'Foo', 'index.tsx');
+    const target = join(cwd, 'README.md');
     expect(existsSync(target)).toBeTruthy();
+
     rimraf.sync(cwd);
 
     cb();

@@ -8,7 +8,7 @@ const cwd = join(fixtures, 'generate');
 
 describe('create-lib:index', () => {
   test('runGenerator', async cb => {
-    const target = join(cwd, 'src', 'Foo', 'index.tsx');
+    const target = join(cwd, 'README.md');
 
     await runGenerator({
       cwd,
