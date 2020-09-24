@@ -10,6 +10,10 @@ package-lock.json
 # production
 dist
 lib
+es
+es6
+
+fixtures
 
 docs-dist
 
