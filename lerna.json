@@ -3,9 +3,11 @@
     "labels": {
       "pr(enhancement)": ":rocket: Enhancement",
       "pr(bug)": ":bug: Bug Fix",
-      "pr(documentation)": ":book: Documentation",
+      "pr(doc)": ":book: Documentation",
       "pr(dependency)": ":deciduous_tree: Dependency",
-      "pr(chore)": ":turtle: Chore"
+      "pr(chore)": ":turtle: Chore",
+      "pr(internal)": ":house: Internal",
+      "pr(breaking)": ":boom: Breaking Change"
     },
     "repo": "2snail/templates",
     "cacheDir": ".changelog"
