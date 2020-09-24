@@ -15,8 +15,8 @@
     "test:watch": "umi-test -w",
     "test:coverage": "umi-test --coverage",
     "clean": "lerna clean",
-    "changelog": "lerna-changelog",
-    "publish": "npm test && npm run changelog && npm run build && lerna publish -m \"chore: publish\""
+    "bak:changelog": "lerna-changelog",
+    "bak:publish": "npm test && npm run changelog && npm run build && lerna publish -m \"chore: publish\""
   },
   "repository": {
     "type": "git",

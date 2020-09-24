@@ -1,6 +1,6 @@
 {
   "name": "@2snail/create-lib",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "create single lib",
   "keywords": [
     "2snail",
@@ -22,7 +22,7 @@
   "files": [
     "lib",
     "bin",
-    "templates",
+    "tpls",
     "README.md",
     "LICENSE",
     "package.json"
@@ -39,5 +39,6 @@
   },
   "dependencies": {
     "@umijs/utils": "^3.2.22"
-  }
+  },
+  "gitHead": "26fd87d42ea4a7cbcfe296142e29eb1e74b90876"
 }
