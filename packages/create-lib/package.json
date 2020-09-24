@@ -1,0 +1,44 @@
+{
+  "name": "@2snail/create-lib",
+  "version": "0.0.6-alpha.0",
+  "description": "create single lib",
+  "keywords": [
+    "2snail",
+    "templates",
+    "lib"
+  ],
+  "author": "zhangaz1 <zhangaz1@hotmail.com>",
+  "homepage": "https://2snail.github.io/templates/lib",
+  "license": "MIT",
+  "bin": {
+    "create-lib": "bin/create-lib.js"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "tpls",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2snail/templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2snail/templates/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@umijs/utils": "^3.2.22"
+  },
+  "gitHead": "26fd87d42ea4a7cbcfe296142e29eb1e74b90876"
+}

@@ -1,6 +1,16 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+  "changelog": {
+    "labels": {
+      "pr(enhancement)": ":rocket: Enhancement",
+      "pr(bug)": ":bug: Bug Fix",
+      "pr(documentation)": ":book: Documentation",
+      "pr(dependency)": ":deciduous_tree: Dependency",
+      "pr(chore)": ":turtle: Chore"
+    },
+    "repo": "2snail/templates",
+    "cacheDir": ".changelog"
+  },
+  "packages": ["packages/*"],
+  "version": "independent",
+  "npm": "npm"
 }
