@@ -8,52 +8,17 @@ const generate = 'generate';
 
 describe('create-lib:index', () => {
   test.only('node cli.js', async cb => {
-    await execa('ls', ['-al'], {
-      cwd: fixtures,
-      execPath: fixtures,
-    })
-      .then(r => console.log('ls -al:', r))
-      .catch(e => console.log(e));
-
-    await execa('ls', ['-al', '..'], {
-      cwd: fixtures,
-      execPath: fixtures,
-    })
-      .then(r => console.log('ls -al:', r))
-      .catch(e => console.log(e));
-
-    await execa('ls', ['-al', '../..'], {
-      cwd: fixtures,
-      execPath: fixtures,
-    })
-      .then(r => console.log('ls -al:', r))
-      .catch(e => console.log(e));
-
     await execa('mkdir', [generate], {
       cwd: fixtures,
       execPath: fixtures,
     }).catch(err => console.error(err.message));
 
     const cwd = join(fixtures, generate);
-    const result = await execa('node', ['../../../bin/create-lib.js'], {
+    const result = await execa('cat', ['../../../bin/create-lib.js'], {
       cwd,
       execPath: cwd,
     });
     console.log('result:', result);
-
-    await execa('ls', ['-al', generate], {
-      cwd: fixtures,
-      execPath: fixtures,
-    })
-      .then(r => console.log('ls -al:', r))
-      .catch(e => console.log(e));
-
-    await execa('node', ['--version', generate], {
-      cwd: fixtures,
-      execPath: fixtures,
-    })
-      .then(r => console.log('ls -al:', r))
-      .catch(e => console.log(e));
 
     const target = join(cwd, 'README.md');
     expect(existsSync(target)).toBeTruthy();
