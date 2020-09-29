@@ -18,32 +18,28 @@
     "clear": "rm -Rf lib",
     "prebuild": "npm run clear",
     "build": "tsc -p ./tsconfig.json",
-    "prepublish": "npm run build",
-    "publish": "npm publish"
+    "release": "semantic-release",
+    "standard-version": "standard-version"
   },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
-  },
   "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@types/jest": "^26.0.14",
+    "@types/ramda": "^0.27.17",
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "semantic-release": "^17.1.2",
+    "standard-version": "^9.0.0",
     "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2",
-    "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
-    "yorkie": "^2.0.0"
+    "typescript": "^4.0.2"
   }
 }
