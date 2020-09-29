@@ -15,7 +15,7 @@
     "test:watch": "umi-test -w",
     "test:coverage": "umi-test --coverage",
     "clean": "lerna clean",
-    "bak:changelog": "lerna-changelog",
+    "changelog": "lerna-changelog",
     "bak:publish": "npm test && npm run changelog && npm run build && lerna publish -m \"chore: publish\""
   },
   "repository": {
@@ -35,20 +35,13 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
-  },
   "dependencies": {
     "react": "^16.12.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",
     "@umijs/test": "^3.0.5",
+    "cz-conventional-changelog": "^3.3.0",
     "dumi": "^1.0.10",
     "execa": "^4.0.3",
     "father-build": "^1.17.2",
@@ -58,5 +51,10 @@
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
