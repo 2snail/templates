@@ -7,7 +7,35 @@ const fixtures = join(__dirname, 'fixtures');
 const generate = 'generate';
 
 describe('create-lib:index', () => {
-  test('node cli.js', async cb => {
+  test.only('node cli.js', async cb => {
+    await execa('ls', ['-al'], {
+      cwd: fixtures,
+      execPath: fixtures,
+    })
+      .then(r => console.log('ls -al:', r))
+      .catch(e => console.log(e));
+
+    await execa('ls', ['-al', '..'], {
+      cwd: fixtures,
+      execPath: fixtures,
+    })
+      .then(r => console.log('ls -al:', r))
+      .catch(e => console.log(e));
+
+    await execa('ls', ['-al', '../..'], {
+      cwd: fixtures,
+      execPath: fixtures,
+    })
+      .then(r => console.log('ls -al:', r))
+      .catch(e => console.log(e));
+
+    await execa('ls', ['-al', '../../lib'], {
+      cwd: fixtures,
+      execPath: fixtures,
+    })
+      .then(r => console.log('ls -al:', r))
+      .catch(e => console.log(e));
+
     await execa('mkdir', [generate], {
       cwd: fixtures,
       execPath: fixtures,
