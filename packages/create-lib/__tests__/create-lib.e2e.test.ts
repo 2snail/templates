@@ -29,13 +29,6 @@ describe('create-lib:index', () => {
       .then(r => console.log('ls -al:', r))
       .catch(e => console.log(e));
 
-    await execa('ls', ['-al', '../../lib'], {
-      cwd: fixtures,
-      execPath: fixtures,
-    })
-      .then(r => console.log('ls -al:', r))
-      .catch(e => console.log(e));
-
     await execa('mkdir', [generate], {
       cwd: fixtures,
       execPath: fixtures,
@@ -47,6 +40,13 @@ describe('create-lib:index', () => {
       execPath: cwd,
     });
     console.log('result:', result);
+
+    await execa('ls', ['-al', generate], {
+      cwd: fixtures,
+      execPath: fixtures,
+    })
+      .then(r => console.log('ls -al:', r))
+      .catch(e => console.log(e));
 
     const target = join(cwd, 'README.md');
     expect(existsSync(target)).toBeTruthy();
