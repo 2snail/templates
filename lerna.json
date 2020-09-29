@@ -1,18 +1,14 @@
 {
-  "changelog": {
-    "labels": {
-      "pr(enhancement)": ":rocket: Enhancement",
-      "pr(bug)": ":bug: Bug Fix",
-      "pr(doc)": ":book: Documentation",
-      "pr(dependency)": ":deciduous_tree: Dependency",
-      "pr(chore)": ":turtle: Chore",
-      "pr(internal)": ":house: Internal",
-      "pr(breaking)": ":boom: Breaking Change"
-    },
-    "repo": "2snail/templates",
-    "cacheDir": ".changelog"
-  },
   "packages": ["packages/*"],
   "version": "independent",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "createRelease": "github"
+    },
+    "publish": {
+      "distag": "beta"
+    }
+  },
   "npm": "npm"
 }
