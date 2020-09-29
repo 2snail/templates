@@ -48,6 +48,13 @@ describe('create-lib:index', () => {
       .then(r => console.log('ls -al:', r))
       .catch(e => console.log(e));
 
+    await execa('node', ['--version', generate], {
+      cwd: fixtures,
+      execPath: fixtures,
+    })
+      .then(r => console.log('ls -al:', r))
+      .catch(e => console.log(e));
+
     const target = join(cwd, 'README.md');
     expect(existsSync(target)).toBeTruthy();
 
