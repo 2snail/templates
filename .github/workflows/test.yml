@@ -30,10 +30,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-cache-
 
-      - name: Install & Test
-        run: |
-          npm install
-          npm run test
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
 
       - name: Code Coverage
         uses: codecov/codecov-action@v1
