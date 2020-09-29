@@ -14,7 +14,7 @@ describe('create-lib:index', () => {
     }).catch(err => console.error(err.message));
 
     const cwd = join(fixtures, generate);
-    const result = await execa('cat', ['../../../bin/create-lib.js'], {
+    const result = await execa('cat', ['../../../lib/cli'], {
       cwd,
       execPath: cwd,
     });
