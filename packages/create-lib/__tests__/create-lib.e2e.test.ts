@@ -11,20 +11,23 @@ describe('create-lib:index', () => {
     await execa('mkdir', [generate], {
       cwd: fixtures,
       execPath: fixtures,
-    }).catch(err => console.error(err.message));
+    })
+      .catch(err => console.error(err.message))
+      .then(() => {
+        const cwd = join(fixtures, generate);
+        return execa('node', ['../../../bin/create-lib.js'], {
+          cwd,
+          execPath: cwd,
+        }).then(result => {
+          console.log('result:', result);
 
-    const cwd = join(fixtures, generate);
-    const result = await execa('cat', ['../../../lib/cli.js'], {
-      cwd,
-      execPath: cwd,
-    });
-    console.log('result:', result);
+          const target = join(cwd, 'README.md');
+          expect(existsSync(target)).toBeTruthy();
 
-    const target = join(cwd, 'README.md');
-    expect(existsSync(target)).toBeTruthy();
-
-    rimraf.sync(cwd);
-
-    cb();
+          rimraf.sync(cwd);
+        });
+      })
+      .catch(err => console.error(err.message))
+      .finally(cb);
   });
 });
