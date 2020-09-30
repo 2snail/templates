@@ -22,7 +22,7 @@ export default class AppGenerator extends Generator {
         siteMode: this.args.site,
         packageName,
       },
-      path: join(__dirname, '../../tpls/Appgenerator/'),
+      path: join(__dirname, '../../tpls/AppGenerator/'),
       target: this.cwd,
     };
 
