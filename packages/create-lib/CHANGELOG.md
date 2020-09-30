@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/2snail/templates/compare/@2snail/create-lib@0.2.0...@2snail/create-lib@0.2.1) (2020-09-30)
+
+### Bug Fixes
+
+- remove unused import prettier in cli.ts ([6ce60d9](https://github.com/2snail/templates/commit/6ce60d9e91dd70f5f0b1a3b217f7ed740f8e0622))
+
 # [0.2.0](https://github.com/2snail/templates/compare/@2snail/create-lib@0.0.6-alpha.1...@2snail/create-lib@0.2.0) (2020-09-30)
 
 ### Bug Fixes
