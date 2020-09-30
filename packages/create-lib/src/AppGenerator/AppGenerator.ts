@@ -28,7 +28,7 @@ export default class AppGenerator extends Generator {
 
     console.log('xxx:', ss);
     const files = glob.sync('**/*', {
-      cwd: join(__dirname, '../../tplst'),
+      cwd: join(__dirname, '../../tpls'),
       dot: true,
       ignore: ['**/node_modules/**'],
     });
@@ -56,7 +56,10 @@ export default class AppGenerator extends Generator {
       dot: true,
       ignore: ['**/node_modules/**'],
     });
-    shell.ls(opts.path).forEach(file => console.log(file));
+    ls(join(opts.path, '.'));
+    ls(join(opts.path, '..'));
+    ls(join(opts.path, '../..'));
+    ls(join(opts.path, '../../..'));
     console.log('files:', files);
     files.forEach(file => {
       const absFile = join(opts.path, file);
@@ -75,4 +78,9 @@ export default class AppGenerator extends Generator {
       }
     });
   }
+}
+
+function ls(path: string) {
+  console.log('xxxx: path: ', path);
+  shell.ls(path).forEach(file => console.log(file));
 }
