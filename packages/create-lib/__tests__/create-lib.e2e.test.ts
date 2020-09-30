@@ -12,7 +12,7 @@ describe('create-lib:index', () => {
       cwd: fixtures,
       execPath: fixtures,
     })
-      .catch(err => console.error(err.message))
+      .catch(err => console.log(err.message))
       .then(() => {
         const cwd = join(fixtures, generate);
         return execa('node', ['../../../bin/create-lib.js'], {
@@ -27,7 +27,7 @@ describe('create-lib:index', () => {
           rimraf.sync(cwd);
         });
       })
-      .catch(err => console.error(err.message))
+      .catch(err => console.log(err.message))
       .finally(cb);
   });
 });

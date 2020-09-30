@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { rimraf } from '@umijs/utils';
 import { existsSync } from 'fs';
-import runGenerator from './';
+import runGenerator from '.';
 
 const fixtures = join(__dirname, 'fixtures');
 const cwd = join(fixtures, 'generate');
