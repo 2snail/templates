@@ -18,7 +18,13 @@ describe('create-lib:index', () => {
 
     const result = await execa(
       'node',
-      ['../../../bin/create-lib.js', '--name=generate', '--license=MIT'],
+      [
+        '../../../bin/create-lib.js',
+        '--name=generate',
+        '--license=MIT',
+        '--originUrl=https://github.com/2snail/templates.git',
+        '--userName=zhangaz1',
+      ],
       {
         cwd,
         execPath: cwd,
