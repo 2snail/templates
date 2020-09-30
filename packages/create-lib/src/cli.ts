@@ -1,6 +1,7 @@
 import { chalk, yParser } from '@umijs/utils';
 import { existsSync } from 'fs';
 import { join } from 'path';
+import { getGitInfo } from './utils/gItInfo';
 
 const args = yParser(process.argv.slice(2), {
   alias: {
@@ -18,10 +19,16 @@ if (args.version && !args._[0]) {
   const { name, version } = require('../package.json');
   console.log(`${name}@${version}${local}`);
 } else {
+  const gitInfo = getGitInfo();
+  console.log('gitInfo:', gitInfo);
+
   require('./')
     .default({
       cwd: process.cwd(),
-      args,
+      args: {
+        ...gitInfo,
+        ...args,
+      },
     })
     .catch((err: Error) => {
       console.error(`Create failed, ${err.message}`);

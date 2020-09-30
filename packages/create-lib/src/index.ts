@@ -8,6 +8,12 @@ export default async ({
   cwd: string;
   args: yargs.Arguments;
 }) => {
+  if (args.originUrl) {
+    const originUrl = args.originUrl as string;
+    args.bugsUrl = originUrl.replace(/\.git$/gi, '/issues');
+    args.homepage = originUrl.replace(/\.git$/gi, '#readme');
+  }
+
   const generator = new AppGenerator({
     cwd,
     args,
