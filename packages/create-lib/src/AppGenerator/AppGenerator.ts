@@ -27,6 +27,12 @@ export default class AppGenerator extends Generator {
     };
 
     console.log('xxx:', ss);
+    const files = glob.sync('**/*', {
+      cwd: join(__dirname, '../../'),
+      dot: true,
+      ignore: ['**/node_modules/**'],
+    });
+    console.log('files:', files);
     shell.echo('hello');
     shell.echo(shell.pwd());
     shell.ls('.').forEach(file => console.log(file));
