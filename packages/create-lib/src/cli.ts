@@ -1,7 +1,6 @@
 import { chalk, yParser } from '@umijs/utils';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { version } from 'prettier';
 
 const args = yParser(process.argv.slice(2), {
   alias: {
