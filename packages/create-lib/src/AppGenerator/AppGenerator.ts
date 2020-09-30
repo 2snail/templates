@@ -22,13 +22,13 @@ export default class AppGenerator extends Generator {
         siteMode: this.args.site,
         packageName,
       },
-      path: join(__dirname, '../../tpls/Appgenerator'),
+      path: join(__dirname, '../../tpls/Appgenerator/'),
       target: this.cwd,
     };
 
     console.log('xxx:', ss);
     const files = glob.sync('**/*', {
-      cwd: join(__dirname, '../../'),
+      cwd: join(__dirname, '../../tplst'),
       dot: true,
       ignore: ['**/node_modules/**'],
     });
