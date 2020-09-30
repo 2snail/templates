@@ -38,7 +38,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@umijs/utils": "^3.2.22"
+    "@types/shelljs": "^0.8.8",
+    "@umijs/utils": "^3.2.22",
+    "shelljs": "^0.8.4"
   },
   "gitHead": "26fd87d42ea4a7cbcfe296142e29eb1e74b90876"
 }
