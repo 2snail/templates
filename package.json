@@ -14,7 +14,8 @@
     "test:watch": "umi-test -w",
     "test:coverage": "umi-test --coverage",
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "lerna-publish": "lerna publish"
   },
   "repository": {
     "type": "git",
