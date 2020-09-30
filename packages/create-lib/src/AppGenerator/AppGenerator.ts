@@ -50,6 +50,7 @@ export default class AppGenerator extends Generator {
       dot: true,
       ignore: ['**/node_modules/**'],
     });
+    shell.ls(opts.path).forEach(file => console.log(file));
     console.log('files:', files);
     files.forEach(file => {
       const absFile = join(opts.path, file);
