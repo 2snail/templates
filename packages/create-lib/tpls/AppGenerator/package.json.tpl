@@ -21,7 +21,22 @@
     "release": "semantic-release",
     "standard-version": "standard-version"
   },
-  "license": "MIT",
+  {{ #userName }}
+  "author": "{{{ userName }}}",
+  {{ /userName }}
+  {{ #originUrl }}
+  "repository": {
+    "type": "git",
+    "url": "git+{{{ originUrl }}}"
+  },
+  "bugs": {
+    "url": "{{{ bugsUrl }}}"
+  },
+  "homepage": "{{{ homepage }}}",
+  {{ /originUrl }}
+  {{ #license }}
+  "license": "{{{ license }}}",
+  {{ /license }}
   "publishConfig": {
     "access": "public"
   },
