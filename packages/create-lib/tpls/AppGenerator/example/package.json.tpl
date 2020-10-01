@@ -4,7 +4,7 @@
 		"test": "jest --watch"
 	},
 	"dependencies": {
-		"{{{ package }}}": "^0.0.0"
+		"{{{ packageName }}}": "^0.0.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^26.0.14",
