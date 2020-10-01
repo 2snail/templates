@@ -17,20 +17,20 @@
     "clean": "lerna clean",
     "lerna-publish": "lerna publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/2snail/templates.git"
-  },
   "keywords": [
     "2snail",
     "template"
   ],
   "author": "zhangaz1",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2snail/templates.git"
+  },
   "bugs": {
     "url": "https://github.com/2snail/templates/issues"
   },
   "homepage": "https://github.com/2snail/templates#readme",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.12.0"
   },

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/2snail/templates/compare/@2snail/create-lib@0.2.1...@2snail/create-lib@0.3.0) (2020-10-01)
+
+### Bug Fixes
+
+- ignore gitInfo test ([a756a31](https://github.com/2snail/templates/commit/a756a318e6f2fd6a7a5037b6a1241ba700aff108))
+- update example package dependency key of self ([e765cfc](https://github.com/2snail/templates/commit/e765cfc416ceb3dce9dd82b4fe4966256e2afa5b))
+
+### Features
+
+- add repository in package.json.tpl and tests ([fa5a133](https://github.com/2snail/templates/commit/fa5a133d4b9ca3cc611275e0912435c3804fe527))
+
 ## [0.2.1](https://github.com/2snail/templates/compare/@2snail/create-lib@0.2.0...@2snail/create-lib@0.2.1) (2020-09-30)
 
 ### Bug Fixes
