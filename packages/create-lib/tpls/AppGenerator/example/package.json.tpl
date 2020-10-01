@@ -1,7 +1,7 @@
 {
 	"name": "{{{ packageName }}}-example",
 	"scripts": {
-		"test": "jest --watch"
+		"test": "jest -w"
 	},
 	"dependencies": {
 		"{{{ packageName }}}": "^0.0.0"
