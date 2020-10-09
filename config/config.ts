@@ -12,5 +12,10 @@ export default defineConfig({
   base: virtualPath,
   publicPath: virtualPath,
   mode: 'site',
+  navs: [
+    null,
+    { title: 'GitHub', path: 'https://github.com/2snail/templates' },
+    { title: 'Change Log', path: 'https://github.com/2snail/templates/releases' }
+  ],
   // more config: https://d.umijs.org/config
 });
