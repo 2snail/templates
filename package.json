@@ -6,6 +6,7 @@
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
+    "predocs:deploy": "npm run docs:build",
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "father-build",
     "deploy": "npm run docs:build && npm run docs:deploy",
@@ -42,7 +43,7 @@
     "@umijs/test": "^3.0.5",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
-    "dumi": "^1.0.10",
+    "dumi": "^1.0.34",
     "execa": "^4.0.3",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
