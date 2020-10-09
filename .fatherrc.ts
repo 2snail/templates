@@ -1,5 +1,5 @@
 export default {
-  entry: ['src/index.ts', 'src/cli.ts'],
+  // entry: ['src/index.ts', 'src/cli.ts'],
   target: 'node',
   disableTypeCheck: true,
   cjs: {
@@ -7,5 +7,5 @@ export default {
     lazy: true,
   },
   extraBabelPlugins: ['@babel/plugin-proposal-optional-chaining'],
-  esm: 'rollup',
+  // esm: 'rollup',
 };

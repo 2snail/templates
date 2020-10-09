@@ -1,0 +1,31 @@
+{
+  "name": "@2snail/collect-options",
+  "version": "0.0.0",
+  "description": "collect options by yargs and enquirer",
+  "keywords": [
+    "2snail",
+    "collect",
+    "options"
+  ],
+  "author": "zhangaz1 <zhangaz1@hotmail.com>",
+  "homepage": "\thttps://github.com/2snail/templates/tree/main/packages/collect-options#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2snail/templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2snail/templates/issues"
+  }
+}
