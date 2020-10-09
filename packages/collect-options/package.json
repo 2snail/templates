@@ -1,6 +1,6 @@
 {
   "name": "@2snail/collect-options",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "collect options by yargs and enquirer",
   "keywords": [
     "2snail",
