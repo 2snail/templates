@@ -1,16 +1,8 @@
 import shell from 'shelljs';
+import IGenOption from './IGenOption';
 
-export interface IGitInfo {
-  userName?: string;
-  userEmail?: string;
-  originUrl?: string;
-  organization?: string;
-  packageName?: string;
-  bugsUrl?: string;
-}
-
-export function getGitInfo(): IGitInfo {
-  let gitInfo: IGitInfo = {};
+export function getGitInfo(): IGenOption {
+  let gitInfo: IGenOption = {};
 
   if (!shell.which('git')) {
     console.log('have no git!');
@@ -24,7 +16,7 @@ export function getGitInfo(): IGitInfo {
   return tryParseOriginUrl(gitInfo);
 }
 
-function tryParseOriginUrl(gitInfo: IGitInfo) {
+function tryParseOriginUrl(gitInfo: IGenOption) {
   if (!gitInfo.originUrl) {
     return gitInfo;
   }
