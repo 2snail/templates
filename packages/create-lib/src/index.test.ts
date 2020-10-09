@@ -10,13 +10,9 @@ describe('create-lib:index', () => {
   beforeAll(async cb => {
     await runGenerator({
       cwd,
-      args: {
-        _: [],
-        $0: '',
-        license: 'MIT',
-        originUrl: 'https://github.com/2snail/templates.git',
-        userName: 'zhangaz1',
-      },
+      license: 'MIT',
+      originUrl: 'https://github.com/2snail/templates.git',
+      userName: 'zhangaz1',
     });
 
     cb();
