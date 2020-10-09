@@ -1,7 +1,8 @@
 {
+  "version": "0.0.0",
   "private": true,
   "name": "templates",
-  "version": "1.0.0",
+  "description": "templates: lib/libs/app",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -9,36 +10,47 @@
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "father-build",
     "deploy": "npm run docs:build && npm run docs:deploy",
-    "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:watch": "umi-test -w",
+    "test:coverage": "umi-test --coverage",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "lerna-publish": "lerna publish"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "keywords": [
+    "2snail",
+    "template"
+  ],
+  "author": "zhangaz1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2snail/templates.git"
   },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
+  "bugs": {
+    "url": "https://github.com/2snail/templates/issues"
   },
+  "homepage": "https://github.com/2snail/templates#readme",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.12.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@types/jest": "^26.0.14",
     "@umijs/test": "^3.0.5",
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0",
     "dumi": "^1.0.10",
+    "execa": "^4.0.3",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
+    "husky": "^4.3.0",
     "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
     "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
-    "yorkie": "^2.0.0"
+    "prettier": "^1.19.1"
   }
 }
