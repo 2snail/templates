@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/2snail/templates/compare/@2snail/create-lib@0.3.0...@2snail/create-lib@0.3.1) (2020-10-09)
+
+### Bug Fixes
+
+- code refactoring ([d5a7d39](https://github.com/2snail/templates/commit/d5a7d391ff742b300ef51b3787319fee12e2ff01))
+- jest --watch -> -w in scripts test ([0750279](https://github.com/2snail/templates/commit/0750279ffbd76f8a3dc0650e9a78032d9ed19b59))
+
 # [0.3.0](https://github.com/2snail/templates/compare/@2snail/create-lib@0.2.1...@2snail/create-lib@0.3.0) (2020-10-01)
 
 ### Bug Fixes
